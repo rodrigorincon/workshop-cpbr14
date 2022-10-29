@@ -27,7 +27,7 @@ function dividir(){
     var valor1 = Number(document.querySelector('#valor1').value);
     var valor2 = Number(document.querySelector('#valor2').value);
 
-    var valorFinal = 0;
+    var valorFinal;
     if(valor2 == 0){
         valorFinal = "Não posso dividir por zero"
     } 
