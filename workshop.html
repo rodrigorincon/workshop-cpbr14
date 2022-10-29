@@ -1,0 +1,66 @@
+<html>
+  <head>
+      <meta http-equiv="content-type" content="text/html; charset=windows-1250">
+      <meta name="generator" content="PSPad editor, www.pspad.com">
+      <title>Meu Primeiro Código</title>
+      <style type="text/css">
+        body {
+            padding-top: 50px;
+            padding-left: 15%;
+        }
+        .calculadora {
+            width:  70%;
+            height: 80%;
+            border: 3px solid black;
+            padding: 10px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h3 {
+            font-size: 35px;
+            text-align: center;
+        }
+        span {
+            font-size: 25px;
+            padding-left: 10%;
+            padding-right: 10px;
+        }
+        .botoes {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 15%;
+        }
+        .botoes-acoes {
+            width: 80px;
+            height: 80px;
+            font-size: 30px;
+            margin-right: 70px;
+            box-shadow: 3px 3px 3px;
+        }
+      </style>
+      <script  type="text/javascript" src="workshop.js"> </script>
+  </head>
+  <body>
+        <div class="calculadora">
+           <h2> Workshop Labkids - aprendendo a programar </h2>
+           
+           <span>Primeiro campo</span>
+           <input type="number" id="valor1" />
+
+            <span>Segundo campo</span>
+            <input type="number" id="valor2" />
+
+            <div class="botoes">
+                <button class="botoes-acoes" id="somar" onclick="somar()"> + </button>
+                <button class="botoes-acoes" id="subtrair" onclick="subtrair()"> - </button>
+                <button class="botoes-acoes" id="multiplicar" onclick="multiplicar()"> X </button>
+                <button class="botoes-acoes" id="dividir" onclick="dividir()"> / </button>
+                <button class="botoes-acoes" id="exponenciar" onclick="exponenciar()"> ^ </button>
+            </div>
+
+            <h3 id="resultado">...</h3>
+        </div>
+  </body>
+</html>
