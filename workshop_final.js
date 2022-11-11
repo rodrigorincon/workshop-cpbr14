@@ -4,7 +4,7 @@ function somar(){
     var valor2 = Number(document.querySelector('#valor2').value);
 
     var valorFinal = valor1 + valor2;
-    imprimirResultado(valorFinal)
+    mostrarResultado(valorFinal)
 }
 
 function subtrair(){
@@ -12,7 +12,7 @@ function subtrair(){
     var valor2 = Number(document.querySelector('#valor2').value);
 
     var valorFinal = valor1 - valor2;
-    imprimirResultado(valorFinal)
+    mostrarResultado(valorFinal)
 }
 
 function multiplicar(){
@@ -20,7 +20,7 @@ function multiplicar(){
     var valor2 = Number(document.querySelector('#valor2').value);
 
     var valorFinal = valor1 * valor2;
-    imprimirResultado(valorFinal)
+    mostrarResultado(valorFinal)
 }
 
 function dividir(){
@@ -29,32 +29,31 @@ function dividir(){
 
     var valorFinal;
     if(valor2 == 0){
-        valorFinal = "Não posso dividir por zero"
+        valorFinal = "Nao posso dividir por zero"
     } 
     else {
         valorFinal = valor1 / valor2;
     }
-    imprimirResultado(valorFinal)
+    mostrarResultado(valorFinal)
 }
 
 function exponenciar(){
     var valor1 = Number(document.querySelector('#valor1').value);
     var valor2 = Number(document.querySelector('#valor2').value);
 
-    valorFinal = 1;
+    var valorFinal = 1;
     for(var contador = 1; contador <= valor2; contador = contador + 1){
         valorFinal = valorFinal * valor1;
     }
-    imprimirResultado(valorFinal)
+    mostrarResultado(valorFinal)
 }
 
 
-function imprimirResultado(valor){
+function mostrarResultado(valorFinal){
     var tagResultado = document.querySelector('#resultado')
-    var textoAntigo = tagResultado.childNodes[0];
-    tagResultado.removeChild(textoAntigo);
+    tagResultado.removeChild(tagResultado.childNodes[0])
 
-    var textoASerAdicionado = document.createTextNode(valor);
+    var textoASerAdicionado = document.createTextNode(valorFinal);
     tagResultado.appendChild(textoASerAdicionado);
 }
 
